@@ -1,9 +1,14 @@
-import React from "react";
+import DashboardLayout from "@/components/common/layout/DashboardLayout";
+import { Providers } from "@/components/common/provider/Providers";
 
-export default function layout({
+export default function DashboardRootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  return <div>{children}</div>;
+  return (
+    <Providers>
+      <DashboardLayout>{children}</DashboardLayout>
+    </Providers>
+  );
 }
